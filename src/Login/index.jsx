@@ -1,12 +1,36 @@
-import React from 'react'
-
-function Managment(){
+import React from "react";
+import "./index.scss";
+import { useNavigate } from "react-router-dom";
+function Managment() {
+  const navigate = useNavigate();
+  function forgotfunction() {
+    navigate("/Password");
+  }
   return (
-    <div>
-    
+    <div className="login">
+      <div className="loginn">
+        <svg
+          onClick={() => navigate(-1)}
+          xmlns="http://www.w3.org/2000/svg"
+          width="25"
+          height="25"
+          fill="currentColor"
+          class="bi bi-arrow-left"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"
+          />
+        </svg>
+        <h2>Welcome Back!Glad to see you,again!</h2>
+        <input type="email" placeholder="Enter your email" />
+        <input type="password" placeholder="Enter your password" />
+        <p onClick={forgotfunction}>Forgot Password</p>
+        <button className="login-button">Login</button>
+      </div>
     </div>
-  )
+  );
 }
 
 export default Managment;
-
