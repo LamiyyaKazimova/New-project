@@ -1,0 +1,36 @@
+.common {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  .site {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 180px;
+    padding: 80px;
+    border-radius: 15px;
+    background-color: whitesmoke;
+    img {
+      width: 200px;
+    }
+    .login {
+      background-color: black;
+      color: white;
+      margin: 15px;
+    }
+
+    .register {
+      color: black;
+      border: 1px solid black;
+    }
+
+    button {
+      width: 200px;
+      border: none;
+      border-radius: 10px;
+      height: 30px;
+      padding: 10px;
+      text-align: center;
+    }
+  }
+}
