@@ -6,21 +6,21 @@ import Register from '../Register';
 import ChangePassword from '../Password';
 import React, { useState } from 'react'
 
-const initialValue={
-  username:"",
-  email:"",
-  password:"",
-  confirmPassword:""
-  }
+import { ManagmentProtector } from '../ManagmentProtector';
+import { TestPage } from '../testpage/Testpage';
+
 function Routers(){
-  const[state,setState]=useState(initialValue)
     return(
         <Routes>
         <Route path="/" element={<Pages />}  />
         <Route path="/managment" element={<Managment />}/>   
         <Route path="/password" element={<Password/>} />
-        <Route path="/register" element={<Register state={state} setState={setState}/>} />
+        <Route path="/register" element={<Register />} />
         <Route path="/changepassword" element={<ChangePassword/>} /> 
+        <Route element={<ManagmentProtector/>}>
+        <Route path="/home" element={<TestPage/>} /> 
+        </Route>
+        
       </Routes>
     )
 }

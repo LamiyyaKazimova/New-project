@@ -1,8 +1,12 @@
-import axios from 'axios'
+import axios from "axios";
 
-const apiUrl="http://localhost:3001/register"
-export async function handlePostRegister(userInfo){
-await axios.post(
-apiUrl
-)
+const apiUrl = "http://localhost:5000/register";
+// export async function handleGetRegister() {
+// return  await axios.get(apiUrl);
+// }
+
+
+export async function handlePostRegister(obj) {
+    return  await axios.post(apiUrl,obj);
 }
+

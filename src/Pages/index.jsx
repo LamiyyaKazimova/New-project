@@ -4,11 +4,11 @@ import { useNavigate } from 'react-router-dom';
 function Pages() {
   const navigate=useNavigate()
   function handleFunction(){
-    navigate('/Managment')
+    navigate('/managment')
   }
 
   function handleRegister(){
-    navigate('/Register')
+    navigate('/register')
   }
   return (
    <div className='common'>
